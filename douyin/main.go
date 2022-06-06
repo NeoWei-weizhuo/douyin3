@@ -10,5 +10,6 @@ func main() {
 
 	initRouter(r)
 	conf.Init()
+	conf.Redis("127.0.0.1:6379", "")
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
