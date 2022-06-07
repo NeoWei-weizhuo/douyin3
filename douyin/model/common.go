@@ -7,26 +7,6 @@ type Response struct {
 	StatusMsg  string `json:"status_msg,omitempty"`
 }
 
-//type Video struct {
-//	//Id            int64  `json:"id,omitempty"`
-//	//Author        User   `json:"author"`
-//	//PlayUrl       string `json:"play_url" json:"play_url,omitempty"`
-//	//CoverUrl      string `json:"cover_url,omitempty"`
-//	//FavoriteCount int64  `json:"favorite_count,omitempty"`
-//	//CommentCount  int64  `json:"comment_count,omitempty"`
-//	//IsFavorite    bool   `json:"is_favorite,omitempty"`
-//
-//	Id            int64  `gorm:"column:id" json:"id,omitempty"`
-//	AuthorId      int64  `gorm:"column:author_id" json:"author_id,omitempty"`
-//	Author        User   `gorm:"foreignKey: Id;references: AuthorId" json:"author"` // gorm:"foreignKey: Id;reference:AuthorId"
-//	PlayUrl       string `gorm:"column:play_url"  json:"play_url,omitempty"`
-//	CoverUrl      string `gorm:"column:cover_url" json:"cover_url,omitempty"`
-//	FavoriteCount int64  `gorm:"column:favorite_count" json:"favorite_count,omitempty"`
-//	CommentCount  int64  `gorm:"column:comment_count" json:"comment_count,omitempty"`
-//	IsFavorite    bool   `gorm:"-" json:"is_favorite,omitempty"`
-//	CreateTime    time.Time
-//}
-
 func (du *Video) TableName() string {
 	return "video_t"
 }
@@ -41,6 +21,7 @@ type Video struct {
 	CommentCount  int64  `gorm:"column:comment_count" json:"comment_count,omitempty"`
 	IsFavorite    bool   `gorm:"-" json:"is_favorite,omitempty"`
 	CreateTime    time.Time
+	Title		  string	`gorm:"title" json:"title"`
 }
 
 type Comment struct {

@@ -4,7 +4,7 @@ import "time"
 
 type User struct {
 	Id              int64     `gorm:"column:user_id" json:"id,omitempty"`
-	Username        string    `gorm:"column:user_name" json:"username,omitempty"`
+	Username        string    `gorm:"column:user_name" json:"name,omitempty"`
 	Password        string    `json:"password,omitempty"`
 	Salt            string    `json:"salt,omitempty"`
 	Followcount     int64     `gorm:"column:follow_count" json:"followcount,omitempty"`

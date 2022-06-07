@@ -24,5 +24,5 @@ type CommentVideoT struct {
 
 type CommentListResponse struct {
 	Response
-	CommentList []Comment `gorm:"column:comment_list"`
+	CommentList []Comment `gorm:"column:comment_list" json:"comment_list"`
 }
